@@ -44,7 +44,7 @@ I would love to extend this model in the unforeseeable future:
 - Using EMA kernels instead of a rectangular one
 - Use and store rolling betas and standard deviations
 - Add in alphas(P/E, B/P ratios) and Kalman filter prediction
-- Storaging of tick data in MongoDb for future back-tests.
+- Storing of tick data in MongoDb for future back-tests.
 
 What It Can Do
 =========================
