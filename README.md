@@ -43,6 +43,7 @@ I would love to extend this model in the unforeseeable future:
 - Using EMA kernels instead of a rectangular one
 - Use and store rolling betas and standard deviations
 - Add in alphas(P/E, B/P ratios) and Kalman filter prediction
+- Storaging of tick data in MongoDb for future back-tests.
 
 What It Can Do
 =========================
@@ -58,6 +59,7 @@ What It Cannot Do
 Final Notes
 ========================
 - I haven't come across any complete high-frequency trading model except those I've created, so here's one to get started off the ground and running.
+- Created in two weeks while dealing with final exams, job search, part-time internship and pet projects. Please forgive on sub-standard quality.
 - This model has never been tested with a real account. All testing done in demo account only.
 - The included strategy parameters is likely to lose money than to make money.
 - If you know of anyone who might be interested to offer a job (i.e paid salary), please pass these links around with thanks.
