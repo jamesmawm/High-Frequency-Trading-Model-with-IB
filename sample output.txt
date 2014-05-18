@@ -1,5 +1,4 @@
-/Users/jamesma/anaconda/bin/python /Users/jamesma/Projects/quanthft/ibHFT/RunHFTModel.py
-HFT model started.
+HFT model started.	
 Server Version: 70
 TWS Time at connection:20140518 15:00:31 CST
 logger:  <error id=-1, errorCode=2104, errorMsg=Market data farm connection is OK:ibdemo>
