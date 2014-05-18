@@ -23,9 +23,9 @@ Other functionalities:
 - Re-evaluating beta every 30 seconds to account for small regime shifts
 
 And greatly inspired by these papers:
-- MIT: Developing high-frequency equities trading model 
+- MIT - Developing high-frequency equities trading model 
   @ http://dspace.mit.edu/handle/1721.1/59122
-- SMU: Profiting from mean-reverting yield-curve trading strategies
+- SMU - Profiting from mean-reverting yield-curve trading strategies
   @ http://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=3488&context=lkcsb_research
 
 Future Enhancements
