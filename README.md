@@ -2,8 +2,6 @@ Purpose
 ====================================
 These files are intended for recruiters, headhunters and hiring managers in evaluating my proficiency in Python and looking to fill entry-level roles in automated trading strategy development, quantitative trading or developer or analyst or researcher, high-frequency trading systems, data analyst or visualization, and model validation.
 
-I do have the right to work in the United States on OPT work visa, hopefully from June 01 2014 onwards (or when I receive my EAD card). 
-
 Requirements
 ====================================
 - An Interactive Brokers account with TWS or API gateway (tested with demo account)
@@ -58,6 +56,7 @@ Final Notes
 ========================
 - This model has never been tested with a real account. All testing in demo account only.
 - The included strategy parameters is likely to lose money than to make money
-- If you know of anybody who might be interested to offer a job (i.e paid salary), pass these links around ;)
+- If you know of anybody who might be interested to offer a job (i.e paid salary), pass these links around
+- I do have the right to work in the United States on OPT work visa, hopefully from June 01 2014 onwards (or when I receive my EAD card). 
 
 Email stuff here: jamesmawm@gmail.com
