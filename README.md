@@ -48,20 +48,19 @@ What It Can Do
 =========================
 - Establish connection to broker and request for tick data
 - Generate trade signals on each incoming tick
-- Place buy/sell orders with a demo account
+- Open position with buy/sell orders, and reverse position
 - Lose money
 
 What It Cannot Do
 =========================
 - Make money
 
-
 Final Notes
 ========================
-- I haven't come across any real or full high-frequency trading model except those I've created, so here's one to get started off the ground and running.
+- I haven't come across any complete high-frequency trading model except those I've created, so here's one to get started off the ground and running.
 - This model has never been tested with a real account. All testing done in demo account only.
 - The included strategy parameters is likely to lose money than to make money.
-- If you know of anybody who might be interested to offer a job (i.e paid salary), pass these links around, with thanks.
+- If you know of anyone who might be interested to offer a job (i.e paid salary), please pass these links around with thanks.
 - I do have the right to work in the United States on OPT work visa, hopefully from June 01 2014 onwards (or when I receive my EAD card). 
 
 Email stuff here: jamesmawm@gmail.com
