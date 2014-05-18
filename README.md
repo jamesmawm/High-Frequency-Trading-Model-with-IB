@@ -1,6 +1,8 @@
 Purpose
 ====================================
-This project is intended for recruiters, headhunters and hiring managers in evaluating my proficiency in Python and looking to fill entry-level roles in automated trading strategies development, quantitative trading or developer or analyst or researcher, high-frequency trading systems, data analyst or visualization, or model validation.
+These files are intended for recruiters, headhunters and hiring managers in evaluating my proficiency in Python and looking to fill entry-level roles in automated trading strategy development, quantitative trading or developer or analyst or researcher, high-frequency trading systems, data analyst or visualization, and model validation.
+
+I do have the right to work in the United States on OPT work visa, hopefully from June 01 2014 onwards (or when I receive my EAD card). 
 
 Requirements
 ====================================
@@ -30,9 +32,32 @@ And greatly inspired by these papers:
 
 Future Enhancements
 ====================================
-I would love to extend this model given sufficient time:
+I would love to extend this model in the unforeseeable future:
 - Extending to more than 2 securities and trade on optimum prices
 - Generate more trade signals based on corrleation and co-integration
 - Using PCA for next-period evaluation
 - Back-testing with zipline
 - Maybe include vector auto-regressions
+- Account for regime shifts (trending or mean-reverting states)
+- Account for structureal breaks
+- Using EMA kernels instead of a rectangular one
+- Use and store rolling betas and standard deviations
+
+What It Can Do
+=========================
+- Establish connection to broker and request for tick data
+- Generate trade signals on each incoming tick
+- Place buy/sell orders to a demo account
+- Lose money
+
+What It Cannot Do
+=========================
+- Make money
+
+Final Notes
+========================
+- This model has never been tested with a real account. All testing in demo account only.
+- The included strategy parameters is likely to lose money than to make money
+- If you know of anybody who might be interested to offer a job (i.e paid salary), pass these links around ;)
+
+Email stuff here: jamesmawm@gmail.com
