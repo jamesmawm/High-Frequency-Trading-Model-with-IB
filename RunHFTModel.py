@@ -181,10 +181,6 @@ def on_tick():
                 else:
                     curr_stdevs.append(None)
 
-    if ticker_id == 0:
-        A_bid_price = bid_price
-        A_ask_price = ask_price
-
     strategy_params.add_to_stdevs_series(curr_stdevs, series_length)
 
     # Re-evaluate strategy params every EVALUATION_TIME_IN_SECONDS
@@ -262,9 +258,9 @@ def logger(msg):
 
 
 def tick_string_event(msg):
-    ticker_id = msg.tickerId
+    this_ticker_id = msg.tickerId
     if msg.tickType == DataType.FIELD_LAST_TIMESTAMP:
-        print ticker_id, ": ", "ts: ", msg.value
+        print this_ticker_id, ": ", "ts: ", msg.value
     else:
         print "notickstring: ", msg
 
@@ -345,6 +341,7 @@ def append_tick_data(stock_index, date_obj, price):
 
 def tick_event(msg):
     global ticks_data, bid_price, ask_price, last_price, ticker_id, strategy_params
+    global A_ask_price, A_bid_price
 
     ticker_id = msg.tickerId
 
@@ -356,9 +353,15 @@ def tick_event(msg):
     if msg.field == DataType.FIELD_BID_PRICE:
         #print ticker_id, ": ", "bid: ", msg.price
         bid_price = msg.price
+        if ticker_id == 0:
+            A_bid_price = bid_price
+
     elif msg.field == DataType.FIELD_ASK_PRICE:
         #print ticker_id, ": ", "ask: ", msg.price
         ask_price= msg.price
+        if ticker_id == 0:
+             A_ask_price = ask_price
+
     #elif msg.field == DataType.FIELD_BID_SIZE:
     #    print ticker_id, ": ", "bidvol: ", msg.size
     #elif msg.field == DataType.FIELD_ASK_SIZE:
