@@ -19,9 +19,10 @@ At the present moment, this model utilizes statistical arbitrage incorporating t
 - Using volatility ratio to detect trending, mean-reversion or Brownian motion
 - Fair valuation by using beta of average 5 minute look-back price window
 - Fair valuation of stock A against more than 1 security (stock B, C...) is possible
+- Make trade decisions based on mean-reversion, volatility ratio and deviation from fair prices
 
 Other functionalities:
-- Generate trade signals and place buy/sell orders on every incoming tick
+- Generate trade signals and place buy/sell orders based on every incoming tick data
 - Re-evaluating beta every 30 seconds to account for small regime shifts
 
 And greatly inspired by these papers:
