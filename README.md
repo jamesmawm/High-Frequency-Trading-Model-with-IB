@@ -12,6 +12,7 @@ Requirements
 Key Concepts
 ====================================
 At the present moment, this model utilizes statistical arbitrage incorporating these methodologies:
+- Cash-neutral strategy with long-short position
 - Bootstrap the model with historical data to derive usable strategy parameters
 - Bootstrapping takes some time, we need to bridge historical data with recent tick data
 - Transforming inhomogenous to homogeneous time series of 1 second intervals
@@ -19,7 +20,7 @@ At the present moment, this model utilizes statistical arbitrage incorporating t
 - Using volatility ratio to detect trending, mean-reversion or Brownian motion
 - Fair valuation by using beta of average 5 minute look-back price window
 - Fair valuation of stock A against more than 1 security (stock B, C...) is possible
-- Make trade decisions based on mean-reversion, volatility ratio and deviation from fair prices
+- Trade decisions based on mean-reversion, volatility ratio and deviation from fair prices
 
 Other functionalities:
 - Generate trade signals and place buy/sell orders based on every incoming tick data
