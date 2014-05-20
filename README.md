@@ -32,6 +32,10 @@ And greatly inspired by these papers:
 - SMU - Profiting from mean-reverting yield-curve trading strategies
   @ http://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=3488&context=lkcsb_research
 
+And book:
+- Introduction to High-Frequency Trading
+  @ http://www.amazon.com/Introduction-High-Frequency-Finance-Ramazan-Gen%C3%A7ay/dp/0122796713
+
 Future Enhancements
 ====================================
 I would love to extend this model in the unforeseeable future:
@@ -52,18 +56,17 @@ What It Can Do
 - Establish connection to broker and request for tick data
 - Generate trade signals on each incoming tick
 - Open position with buy/sell orders, and reverse position
-- Lose money
 
-What It Cannot Do
+Disclaimer
 =========================
-- Make money
+- Any securities listed is not a solicitation to trade
+- This model has not been proven to make money, and I will not be responsible for any outcome of your trading account
 
 Final Notes
 ========================
-- I haven't come across any complete high-frequency trading model except those I've created, so here's one to get started off the ground and running.
-- Created in two weeks while dealing with final exams, job search, part-time internship and pet projects. Please forgive on sub-standard quality.
-- This model has never been tested with a real account. All testing done in demo account only.
-- The included strategy parameters is likely to lose money than to make money.
+- I haven't come across any complete high-frequency trading model lying around, so here's one to get started off the ground and running.
+- This model has never been used with a real account. All testing was done in demo account only.
+- The included strategy parameters are theoretical ideal conditions, which have not been adjusted for back-tested results.
 - If you know of anyone who might be interested to offer a job (i.e paid salary), please pass these links around with thanks.
 - I do have the right to work in the United States on OPT work visa, hopefully from June 01 2014 onwards (or when I receive my EAD card). 
 
