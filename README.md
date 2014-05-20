@@ -56,6 +56,7 @@ What It Can Do
 - Establish connection to broker and request for tick data
 - Generate trade signals on each incoming tick
 - Open position with buy/sell orders, and reverse position
+- Display and update chart in real-time of stock A's last price and fair price using stock B
 
 Disclaimer
 =========================
