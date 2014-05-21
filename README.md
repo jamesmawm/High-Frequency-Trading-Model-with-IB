@@ -33,7 +33,7 @@ And greatly inspired by these papers:
   @ http://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=3488&context=lkcsb_research
 
 And book:
-- Introduction to High-Frequency Trading
+- Introduction to High-Frequency Finance
   @ http://www.amazon.com/Introduction-High-Frequency-Finance-Ramazan-Gen%C3%A7ay/dp/0122796713
 
 Future Enhancements
@@ -68,6 +68,7 @@ Final Notes
 - I haven't come across any complete high-frequency trading model lying around, so here's one to get started off the ground and running.
 - This model has never been used with a real account. All testing was done in demo account only.
 - The included strategy parameters are theoretical ideal conditions, which have not been adjusted for back-tested results.
+- This project is still a work in progress. A good model could take months or even years!
 - If you know of anyone who might be interested to offer a job (i.e paid salary), please pass these links around with thanks.
 - I do have the right to work in the United States on OPT work visa, hopefully from June 01 2014 onwards (or when I receive my EAD card). 
 
