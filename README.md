@@ -70,6 +70,6 @@ Final Notes
 - The included strategy parameters are theoretical ideal conditions, which have not been adjusted for back-tested results.
 - This project is still a work in progress. A good model could take months or even years!
 - If you know of anyone who might be interested to offer a job (i.e paid salary), please pass these links around with thanks.
-- I do have the right to work in the United States on OPT work visa, hopefully from June 01 2014 onwards (or when I receive my EAD card). 
+- I have the right to work in the United States on OPT work visa.
 
 Email stuff here: jamesmawm@gmail.com
