@@ -79,6 +79,6 @@ Final Notes
 - This model has never been used with a real account. All testing was done in demo account only.
 - The included strategy parameters are theoretical ideal conditions, which have not been adjusted for back-tested results.
 - This project is still a work in progress. A good model could take months or even years!
-- I have the right to work in the United States on OPT work visa.
+- I possess a valid US EAD.
 
 Email stuff here: jamesmawm@gmail.com
