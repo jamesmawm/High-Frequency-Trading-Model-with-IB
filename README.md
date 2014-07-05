@@ -63,6 +63,16 @@ Disclaimer
 - Any securities listed is not a solicitation to trade
 - This model has not been proven to make money, and I will not be responsible for any outcome of your trading account
 
+Is this HFT?
+======================== 
+Sure, I had some questions "how is this high-frequency" or "not for UHFT" or "this is not front-running". Let's take a closer look at these definitions:
+- High-frequency finance: the studying of incoming tick data arriving at high frequencies, say hundreds of ticks per second. High frequency finance aims to derive stylized facts from high frequency signals. 
+
+- High-frequency trading: the turnover of positions at high frequencies; positions are typically held at most in seconds, which amounts to hundreds of trades per second.
+
+This models aims to incorporate the above two functions and present a simplistic view to traders who wish to automate their trades, get started in Python trading or use a free trading platform.
+
+
 Final Notes
 ========================
 - I haven't come across any complete high-frequency trading model lying around, so here's one to get started off the ground and running.
