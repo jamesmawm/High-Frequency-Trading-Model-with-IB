@@ -73,7 +73,7 @@ Simply called 'The Gateway', it is a C# application that exposes a socket and
 public API method calls for interfacing Python with futures markets including CME,
 CBOT, NYSE, Eurex and ICE.
 
-More information on my Github: https://github.com/hftstrat/The-Gateway-code-samples
+More information on my GitHub: https://github.com/hftstrat/The-Gateway-code-samples
 
 
 Future Enhancements
