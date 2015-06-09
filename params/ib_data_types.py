@@ -1,10 +1,14 @@
-#######################################
-# Author: James Ma
-# Email stuff here: jamesmawm@gmail.com
-#######################################
+"""
+Author: James Ma
+Email stuff here: jamesmawm@gmail.com
+"""
 
-# https://www.interactivebrokers.com/en/software/api/apiguide/java/reqhistoricaldata.htm
-# https://www.interactivebrokers.com/en/software/api/apiguide/tables/tick_types.htm
+"""
+API doumentation:
+https://www.interactivebrokers.com/en/software/api/apiguide/java/reqhistoricaldata.htm
+https://www.interactivebrokers.com/en/software/api/apiguide/tables/tick_types.htm
+"""
+
 FIELD_BID_SIZE = 0
 FIELD_BID_PRICE = 1
 FIELD_ASK_PRICE = 2
@@ -30,12 +34,12 @@ FIELD_HALTED_NOT_HALTED = 0
 FIELD_HALTED_IS_HALTED = 1
 FIELD_HALTED_BY_VOLATILITY = 2
 
-DURATION_1_HR = "3600 S"
+DURATION_1_HR = '3600 S'
 DURATION_1_MIN = "60 S"
-DURATION_1_DAY = "1 D"
+DURATION_1_DAY = '1 D'
 
-BAR_SIZE_1_SEC = "1 secs"
-BAR_SIZE_1_MIN = "1 min"
+BAR_SIZE_5_SEC = '5 secs'
+BAR_SIZE_1_MIN = '1 min'
 
 RTH_ALL = 0
 RTH_ONLY_TRADING_HRS = 1
