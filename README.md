@@ -93,6 +93,7 @@ Disclaimer
 - Any securities listed is not a solicitation to trade
 - This model has not been proven to be profitable in a live account,
 and I will not be responsible for any outcome of your trades.
+Should you be profitable, thank you notes are welcomed.
 
 Is this HFT?
 ===
