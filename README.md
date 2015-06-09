@@ -2,6 +2,9 @@ Purpose
 ====================================
 A simple trading equity trading model on Interactive Brokers' API dealing with (pseudo) high-frequency data studies.
 
+![alt text](https://github.com/jamesmawm/High-Frequency-Trading-Model-with-IB/blob/master/output/run_02_screenshot.png?raw=true "Mastering Python for Finance")
+
+
 What's New
 ===
 8 Jun 2014
@@ -18,9 +21,9 @@ Requirements
 
 How to Use
 ===
-- *classes* folder contains the required class files
-- *models* folder contains a simple trading model
-- *params* folder contains file which stores the various settings used
+- *classes* folder contain the required class files
+- *models* folder contain a simple trading model
+- *params* folder contain files storing the various settings used
 - Run **main.py** to start the model
 
 Key Concepts
@@ -62,8 +65,8 @@ I would love to extend this model in the unforeseeable future:
 
 Wrote a Book
 ===
-I wrote a book titled "Mastering Python for Finance", discussing the use of interfacing IbPy to
-Interactive Brokers' step by step. A number of other topics such as analytics, algorithmic trading ideas, big data and
+I wrote a book titled 'Mastering Python for Finance', discussing the interfacing of IbPy to
+Interactive Brokers step by step. A number of other topics such as analytics, algorithmic trading ideas, big data and
 financial theory are also discussed. You might find it useful.
 It is available on major sales channels including Amazon, Safari Online and Barnes & Noble,
 in paperback, Kindle and ebook.
@@ -71,7 +74,7 @@ Get it from:
 - http://www.amazon.com/Mastering-Python-Finance-James-Weiming/dp/1784394513
 - https://www.packtpub.com/big-data-and-business-intelligence/mastering-python-finance
 
-Source codes on GitHub:
+Source codes and table of contents on GitHub:
 - https://github.com/jamesmawm/Mastering-Python-for-Finance-source-codes
 
 Disclaimer
