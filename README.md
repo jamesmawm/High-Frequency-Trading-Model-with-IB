@@ -32,8 +32,8 @@ At the present moment, this model utilizes statistical arbitrage incorporating t
 - Bootstrapping the model with historical data to derive usable strategy parameters
 - Resampling inhomogeneous time series to homogeneous time series
 - Selection of highly-correlated stock pair
-- The ability to short on stock and long the other.
-- Using volatility ratio to detect up trend or down trend.
+- The ability to short on one stock and long the other.
+- Using volatility ratio to detect up or down trend.
 - Fair valuation of security using beta, or the mean over some past interval.
 - One pandas DataFrame to store prices, another one to store indicator values.
 
@@ -51,18 +51,6 @@ And book:
 - Introduction to High-Frequency Finance
   @ http://www.amazon.com/Introduction-High-Frequency-Finance-Ramazan-Gen%C3%A7ay/dp/0122796713
 
-Future Enhancements
-===
-I would love to extend this model in the unforeseeable future:
-- Extending to more than 2 securities and trade on optimum prices
-- Generate trade signals based on correlation and co-integration
-- Using PCA for next-period evaluation
-- Include vector auto-regressions
-- Account for regime shifts (trending or mean-reverting states)
-- Account for structural breaks
-- Using EMA kernels instead of a rectangular one
-- Add in alphas(P/E, B/P ratios) and Kalman filter prediction
-
 Wrote a Book
 ===
 I wrote a book titled 'Mastering Python for Finance', discussing the interfacing of IbPy to
@@ -76,6 +64,18 @@ Get it from:
 
 Source codes and table of contents on GitHub:
 - https://github.com/jamesmawm/Mastering-Python-for-Finance-source-codes
+
+Future Enhancements
+===
+I would love to extend this model in the unforeseeable future:
+- Extending to more than 2 securities and trade on optimum prices
+- Generate trade signals based on correlation and co-integration
+- Using PCA for next-period evaluation
+- Include vector auto-regressions
+- Account for regime shifts (trending or mean-reverting states)
+- Account for structural breaks
+- Using EMA kernels instead of a rectangular one
+- Add in alphas(P/E, B/P ratios) and Kalman filter prediction
 
 Disclaimer
 ===
