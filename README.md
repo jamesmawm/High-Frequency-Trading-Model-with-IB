@@ -2,7 +2,7 @@ Purpose
 ====================================
 A simple trading equity trading model on Interactive Brokers' API dealing with (pseudo) high-frequency data studies.
 
-![alt text](https://github.com/jamesmawm/High-Frequency-Trading-Model-with-IB/blob/master/output/run_02_screenshot.png?raw=true "Mastering Python for Finance")
+![alt text](https://github.com/jamesmawm/High-Frequency-Trading-Model-with-IB/blob/master/output/run_02_screenshot.png?raw=true "Chart output")
 
 
 What's New
