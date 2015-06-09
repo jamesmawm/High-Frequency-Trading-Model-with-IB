@@ -65,6 +65,17 @@ Get it from:
 Source codes and table of contents on GitHub:
 - https://github.com/jamesmawm/Mastering-Python-for-Finance-source-codes
 
+Wrote a Gateway
+===
+What about trading futures? *Psst* I've got you covered.
+
+Simply called 'The Gateway', it is a C# application that exposes a socket and
+public API method calls for interfacing with futures markets including CME,
+CBOT, NYSE, Eurex, ICE.
+
+More information on my Github: https://github.com/hftstrat/The-Gateway-code-samples
+
+
 Future Enhancements
 ===
 I would love to extend this model in the unforeseeable future:
