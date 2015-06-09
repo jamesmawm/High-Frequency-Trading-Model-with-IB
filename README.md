@@ -13,7 +13,7 @@ What's New
 
 Requirements
 ===
-- An Interactive Brokers account with TWS/API gateway (or use edemo/demouser account)
+- An Interactive Brokers account with TWS/API gateway (or use 'edemo/demouser' account)
 - IbPy @ https://github.com/blampe/IbPy
 - Pandas
 - NumPy
