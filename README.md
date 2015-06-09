@@ -7,9 +7,9 @@ A simple trading equity trading model on Interactive Brokers' API dealing with (
 
 What's New
 ===
-8 Jun 2014
+8 Jun 2015
 - Refactor and conform to PEP8 standards
-- New chart output with 4 subplots
+- New chart display with 4 subplots
 
 Requirements
 ===
