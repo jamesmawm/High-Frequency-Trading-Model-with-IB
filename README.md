@@ -2,8 +2,9 @@ Purpose
 ====================================
 A simple trading equity trading model on Interactive Brokers' API dealing with (pseudo) high-frequency data studies.
 
-What's New (8 Jun 2014)
+What's New
 ===
+8 Jun 2014
 - Refactor and conform to PEP8 standards
 - New chart output with 4 subplots
 
