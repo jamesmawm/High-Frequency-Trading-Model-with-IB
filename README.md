@@ -65,6 +65,10 @@ Get it from:
 Source codes and table of contents on GitHub:
 - https://github.com/jamesmawm/Mastering-Python-for-Finance-source-codes
 
+Check out these awesome books too:
+- Python for Finance by Dr. Yves Hilpisch: http://shop.oreilly.com/product/0636920032441.do
+- Python for Quants. Volume I. by Dr. Pawel Lachowicz: http://www.quantatrisk.com/python-for-quants-volume-i/
+
 Wrote a Gateway
 ===
 What about trading futures? *Psst* I've got you covered.
