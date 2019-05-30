@@ -1,9 +1,4 @@
 """
-Author: James Ma
-Email stuff here: jamesmawm@gmail.com
-"""
-
-"""
 API doumentation:
 https://www.interactivebrokers.com/en/software/api/apiguide/java/reqhistoricaldata.htm
 https://www.interactivebrokers.com/en/software/api/apiguide/tables/tick_types.htm
