@@ -1,7 +1,3 @@
-"""
-Author: James Ma
-Email stuff here: jamesmawm@gmail.com
-"""
 from datetime import datetime
 import pandas as pd
 import datetime as dt
@@ -13,7 +9,7 @@ class StrategyParameters:
         self.resample_interval_secs = resample_interval_secs
         self.__evaluation_time_secs = evaluation_time_secs
 
-        self.__bootstrap_completed = False
+        self.__bootstrap_completed = True
         self.last_evaluation_time = datetime.now()
 
         self.__COL_BETA = 'beta'

@@ -1,12 +1,9 @@
-"""
-Author: James Ma
-Email stuff here: jamesmawm@gmail.com
-"""
 import pandas as pd
 import matplotlib.pyplot as plt
 import datetime as dt
 import threading
-
+from pandas.plotting import register_matplotlib_converters
+register_matplotlib_converters()
 
 class Chart:
 
