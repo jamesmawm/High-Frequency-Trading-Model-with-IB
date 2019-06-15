@@ -1,13 +1,12 @@
 # Created by .ignore support plugin (hsz.mobi)
-### Example user template template
-### Example user template
 
 # IntelliJ project files
 .idea
 *.iml
 out
 gen
-### VisualStudioCode template
+
+### Visual Studio Code template
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -15,6 +14,7 @@ gen
 !.vscode/extensions.json
 
 ### Python template
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -208,7 +208,3 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
-
-.gitignore
-IB PairsTrading Algo
-IB PairsTrading Algo.pub
