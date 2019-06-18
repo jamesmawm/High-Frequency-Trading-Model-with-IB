@@ -1,12 +1,23 @@
 from ib_insync import util
 
+from models.hft_model import HftModel
+
 if __name__ == '__main__':
-	from ib_insync import *
+	model = HftModel(host='localhost',
+	                     # port = 4002,
+	                     port = 7497,
+	                     client_id = 1,
+	                     is_use_gateway = False,
+	                     evaluation_time_secs = 15,
+	                     resample_interval_secs = '30s')
+	model.run()
+
+	# from ib_insync import *
 
 	# util.startLoop()
 
-	ib = IB()
-	ib.connect('127.0.0.1', 7497, clientId=15)
+	# ib = IB()
+	# ib.connect('127.0.0.1', 7497, clientId=15)
 
 	# contracts = [Forex(pair) for pair in ('EURUSD', 'USDJPY', 'GBPUSD', 'USDCHF', 'USDCAD', 'AUDUSD')]
 	# ib.qualifyContracts(*contracts)
@@ -19,13 +30,13 @@ if __name__ == '__main__':
 	# ticker = ib.ticker(eurusd)
 	# ib.sleep(2)
 
-	eurusd = Forex('EURUSD')
-	ticker = ib.reqTickByTickData(eurusd, 'BidAsk')
-	while True:
-		print(ticker)
-		ib.sleep(2)
-
-	print(ticker)
+	# eurusd = Forex('EURUSD')
+	# ticker = ib.reqTickByTickData(eurusd, 'BidAsk')
+	# while True:
+	# 	print(ticker)
+	# 	ib.sleep(2)
+	#
+	# print(ticker)
 
 # from ib_insync import *
 #
@@ -52,6 +63,7 @@ if __name__ == '__main__':
 #                      is_use_gateway = False,
 #                      evaluation_time_secs = 15,
 #                      resample_interval_secs = '30s')
+# 	model.run()
 #
 #     # model.start(["RDS A", "BP"], 250)
 #     # model.start(["JPM", "BAC"], 100)

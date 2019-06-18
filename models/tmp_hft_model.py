@@ -23,7 +23,7 @@ from strategy_parameters import StrategyParameters
 # from ibapi import client, wrapper, common, ticktype, message, utils, reader
 
 
-class HFTModel:
+class TmpHFTModel:
 
     def __init__(self,
                  host = 'localhost',
