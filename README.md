@@ -7,6 +7,15 @@ A simple trading equity trading model on Interactive Brokers' API dealing with (
 
 What's New
 ===
+
+14 Jun 2019
+
+Merged pull request from: https://github.com/chicago-joe/IB_PairsTrading_Algo
+
+Thanks to chicago-joe for updating to work with Python 3.
+
+As this is only a compatibility update, there are many outdated components and the trading model is quite unlikely to be working as intended.
+
 8 Jun 2015
 - Refactor and conform to PEP8 standards
 - New chart display with 4 subplots
