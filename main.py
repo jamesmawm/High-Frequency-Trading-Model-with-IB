@@ -1,7 +1,7 @@
-from .models.hft_model import HFTModel
+from models.hft_model import HftModel
 
 if __name__ == '__main__':
-	model = HFTModel(
+	model = HftModel(
 		host='localhost',
 		port=7497,
 		client_id=101,
@@ -12,4 +12,5 @@ if __name__ == '__main__':
 
 	# model.start(["RDS A", "BP"], 250)
 	# model.start(["JPM", "BAC"], 100)
-	model.start(["SPY", "QQQ"], 100)
+	# model.start(["SPY", "QQQ"], 100)
+	model.start()
