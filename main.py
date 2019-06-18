@@ -1,42 +1,50 @@
-from ib_insync import util
+from ib_insync import Forex
 
 from models.hft_model import HftModel
 
 if __name__ == '__main__':
-	model = HftModel(host='localhost',
-	                     # port = 4002,
-	                     port = 7497,
-	                     client_id = 1,
-	                     is_use_gateway = False,
-	                     evaluation_time_secs = 15,
-	                     resample_interval_secs = '30s')
-	model.run()
+	model = HftModel(
+		host='localhost',
+		# port = 4002,
+		port=7497,
+		client_id=1,
+		is_use_gateway=False,
+		evaluation_time_secs=15,
+		resample_interval_secs='30s'
+	)
 
-	# from ib_insync import *
+	to_trade = [
+		('EURUSD', Forex('EURUSD')),
+		('USDJPY', Forex('USDJPY'))
+	]
 
-	# util.startLoop()
+	model.run(to_trade=to_trade)
 
-	# ib = IB()
-	# ib.connect('127.0.0.1', 7497, clientId=15)
+# from ib_insync import *
 
-	# contracts = [Forex(pair) for pair in ('EURUSD', 'USDJPY', 'GBPUSD', 'USDCHF', 'USDCAD', 'AUDUSD')]
-	# ib.qualifyContracts(*contracts)
-	#
-	# eurusd = contracts[0]
-	#
-	# for contract in contracts:
-	# 	ib.reqMktData(contract, '', False, False)
-	#
-	# ticker = ib.ticker(eurusd)
-	# ib.sleep(2)
+# util.startLoop()
 
-	# eurusd = Forex('EURUSD')
-	# ticker = ib.reqTickByTickData(eurusd, 'BidAsk')
-	# while True:
-	# 	print(ticker)
-	# 	ib.sleep(2)
-	#
-	# print(ticker)
+# ib = IB()
+# ib.connect('127.0.0.1', 7497, clientId=15)
+
+# contracts = [Forex(pair) for pair in ('EURUSD', 'USDJPY', 'GBPUSD', 'USDCHF', 'USDCAD', 'AUDUSD')]
+# ib.qualifyContracts(*contracts)
+#
+# eurusd = contracts[0]
+#
+# for contract in contracts:
+# 	ib.reqMktData(contract, '', False, False)
+#
+# ticker = ib.ticker(eurusd)
+# ib.sleep(2)
+
+# eurusd = Forex('EURUSD')
+# ticker = ib.reqTickByTickData(eurusd, 'BidAsk')
+# while True:
+# 	print(ticker)
+# 	ib.sleep(2)
+#
+# print(ticker)
 
 # from ib_insync import *
 #
