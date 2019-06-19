@@ -4,7 +4,7 @@ from models.hft_model import HftModel
 
 if __name__ == '__main__':
 	model = HftModel(
-		host='localhost',
+		host='127.0.0.1',
 		# port = 4002,
 		port=7497,
 		client_id=1,
@@ -18,7 +18,7 @@ if __name__ == '__main__':
 		('USDJPY', Forex('USDJPY'))
 	]
 
-	model.run(to_trade=to_trade)
+	model.run(to_trade=to_trade, trade_qty=100)
 
 # from ib_insync import *
 

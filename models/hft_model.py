@@ -3,7 +3,7 @@ import datetime as dt
 import pandas as pd
 from threading import Thread
 
-from ib_insync import IB, Stock, Forex
+from ib_insync import IB, Stock, Forex, MarketOrder
 from ib_insync.util import df
 from dateutil import tz
 
@@ -12,7 +12,7 @@ class HftModel(object):
 
 	def __init__(
 		self,
-		host='localhost', port=4001, client_id=101,
+		host='127.0.0.1', port=7497, client_id=101,
 		is_use_gateway=False, evaluation_time_secs=20,
 		resample_interval_secs='30s',
 		moving_window_period=dt.timedelta(hours=1)
@@ -30,29 +30,44 @@ class HftModel(object):
 		self.historical_data = {}  # of mid prices
 		self.df_hist = None
 
-		self.symbols = []
+		self.symbols, self.contracts = [], []
 
 		self.volatility_ratio = 1
 		self.beta = 0
 		self.moving_window_period = dt.timedelta(hours=1)
 		self.is_buy_signal, self.is_sell_signal = False, False
+		self.position = 0
+		self.trade_qty = 0
+		self.is_orders_pending = False
+		self.pending_order_ids = set()
 
-	def run(self, to_trade=[]):
-		self.ib.connect('127.0.0.1', 7497, clientId=101)
+	def run(self, to_trade=[], trade_qty=0):
+		self.trade_qty = trade_qty
+
+		self.ib.connect(self.host, self.port, clientId=101)
 
 		self.symbol_map = {str(contract): ident for (ident, contract) in to_trade}
 		contracts = [contract for (_, contract) in to_trade]
 		symbols = list(self.symbol_map.values())
 		self.symbols = symbols
+		self.contracts = contracts
 
 		self.df_hist = pd.DataFrame(columns=symbols)
 
+		self.request_account_updates()
 		self.request_historical_data(contracts)
 		self.request_market_data(contracts)
 
 		while self.ib.waitOnUpdate():
 			self.ib.sleep(1)
 			self.calculate_strategy_params()
+
+	def request_account_updates(self):
+		self.ib.reqAccountSummary()
+		self.ib.accountSummaryEvent += self.on_account
+
+	def on_account(self, data):
+		print('on_acocunt:', data)
 
 	def request_market_data(self, contracts):
 		for contract in contracts:
@@ -90,42 +105,50 @@ class HftModel(object):
 		self.check_and_enter_orders()
 
 	def check_and_enter_orders(self):
-		# if is_position_closed and is_sell_signal:
-		# 	print
-		# 	"=================================="
-		# 	print
-		# 	"OPEN SHORT POSIITON: SELL A BUY B"
-		# 	print
-		# 	"=================================="
-		# 	self.__place_spread_order(-self.trade_qty)
-		#
-		# elif is_position_closed and is_buy_signal:
-		# 	print
-		# 	"=================================="
-		# 	print
-		# 	"OPEN LONG POSIITON: BUY A SELL B"
-		# 	print
-		# 	"=================================="
-		# 	self.__place_spread_order(self.trade_qty)
-		#
-		# elif is_short and is_buy_signal:
-		# 	print
-		# 	"=================================="
-		# 	print
-		# 	"CLOSE SHORT POSITION: BUY A SELL B"
-		# 	print
-		# 	"=================================="
-		# 	self.__place_spread_order(self.trade_qty)
-		#
-		# elif is_long and is_sell_signal:
-		# 	print
-		# 	"=================================="
-		# 	print
-		# 	"CLOSE LONG POSITION: SELL A BUY B"
-		# 	print
-		# 	"=================================="
-		# 	self.__place_spread_order(-self.trade_qty)
-		pass
+		if self.is_orders_pending:
+			return
+
+		if self.is_position_flat and self.is_sell_signal:
+			print('OPENING SHORT POSITION')
+			self.place_spread_order(-self.trade_qty)
+
+		elif self.is_position_flat and self.is_buy_signal:
+			print('OPENING LONG POSITION:')
+			self.place_spread_order(self.trade_qty)
+
+		elif self.is_position_short and self.is_buy_signal:
+			print('CLOSING SHORT POSITION')
+			self.place_spread_order(self.trade_qty)
+
+		elif self.is_position_long and self.is_sell_signal:
+			print('CLOSING LONG POSITION')
+			self.place_spread_order(self.trade_qty)
+
+	def place_spread_order(self, qty):
+		[contract_a, contract_b] = self.contracts
+
+		order_a = MarketOrder(self.get_order_action(qty), abs(qty))
+		trade_a = self.ib.placeOrder(contract_a, order_a)
+		print(trade_a)
+		order_b = MarketOrder(self.get_order_action(-qty), abs(qty))
+		trade_b = self.ib.placeOrder(contract_b, order_b)
+		print(trade_b)
+
+		self.is_orders_pending = True
+		trade_a.filledEvent += self.on_filled
+		# trade_a.statusEvent += self.on_status
+
+
+
+		print('orders completed:', trade_a)
+		print('orders completed:', trade_b)
+
+	def on_filled(self, trade):
+		print('on_filled:', trade)
+
+
+	# def on_status(self, trade):
+	# 	print('on_status:', trade)
 
 	def calculate_positions(self):
 		# Use account position details
@@ -160,12 +183,13 @@ class HftModel(object):
 
 		resampled = self.df_hist.resample('30s').ffill().dropna()
 		mean = resampled.mean()
-		self.beta = mean[symbol_a] / mean[symbol_b]
+		self.beta = mean[symbol_a] / mean[symbol_b] + 1
 
 		stddevs = resampled.pct_change().dropna().std()
 		self.volatility_ratio = stddevs[symbol_a] / stddevs[symbol_b]
 
 		print('beta:', self.beta, 'vr:', self.volatility_ratio)
+		print('positions:', self.ib.positions())
 
 	def calculate_signals(self):
 		self.trim_historical_data()
@@ -183,13 +207,13 @@ class HftModel(object):
 
 	def is_overbought_or_oversold(self):
 		[symbol_a, symbol_b] = self.symbols
-		leg_a_last_price = self.df_hist[symbol_a].dropna().values[-1]
-		leg_b_last_price = self.df_hist[symbol_b].dropna().values[-1]
+		last_price_a = self.df_hist[symbol_a].dropna().values[-1]
+		last_price_b = self.df_hist[symbol_b].dropna().values[-1]
 
-		expected_leg_a_price = leg_b_last_price * self.beta
+		expected_last_price_a = last_price_b * self.beta
 
-		is_overbought = leg_a_last_price < expected_leg_a_price  # Cheaper than expected
-		is_oversold = leg_a_last_price > expected_leg_a_price  # Higher than expected
+		is_overbought = last_price_a < expected_last_price_a  # Cheaper than expected
+		is_oversold = last_price_a > expected_last_price_a  # Higher than expected
 
 		return is_overbought, is_oversold
 
@@ -234,3 +258,18 @@ class HftModel(object):
 	def convert_local_datetime(self, datetime):
 		local_time = datetime.replace(tzinfo=self.local_timezone)
 		return pd.to_datetime(local_time)
+
+	def get_order_action(self, qty):
+		return 'BUY' if qty >= 0 else 'SELL'
+
+	@property
+	def is_position_flat(self):
+		return self.position == 0
+
+	@property
+	def is_position_short(self):
+		return self.position < 0
+
+	@property
+	def is_position_long(self):
+		return self.position > 0
