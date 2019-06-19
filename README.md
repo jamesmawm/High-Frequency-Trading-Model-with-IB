@@ -44,7 +44,9 @@ Setting up
 
 ## Running on a local Python console 
 
-- If you have Python 3.7, install the requirements:
+Steps to run the trading model on your command line:
+
+- Within a Python 3.7 environment, install the requirements:
     
         pip install -r requirements.txt
 
@@ -52,7 +54,7 @@ Setting up
 
     - enable ActiveX and Socket Clients
     - check the port number you will be using
-    - If using Docker, uncheck "Allow connections from localhost only" and enter the machine IP running TWS to "Trusted IPs".
+    - If using Docker, uncheck **Allow connections from localhost only** and enter the machine IP running TWS to **Trusted IPs**.
 
 - Update `main.py` with the required parameters and run the model with the command:
 
@@ -61,13 +63,13 @@ Setting up
 ## Running from a Docker container
 
 A Docker container helps to automatically build your running environment and isolate changes, all in just a few simple commands!
-You can run this trading model in headless model remotely.
+You can run this trading model in headless model remotely with the following steps:
 
 - Ensure your machine has docker and docker-compose installed. Build a running image:
 
         docker-compose build
         
-- Update the parameters in `docker-compose.yml`. I've set the `TWS_HOST` value in my environment variable. This is the IP address of my remote machine running TWS. Or, you can just key in the value directly there. Then, run the image as a container:
+- Update the parameters in `docker-compose.yml`. I've set the `TWS_HOST` value in my environment variables. This is the IP address of my remote machine running TWS. Or, you can just manually enter the IP address value directly there. Then, run the image as a container:
 
         docker-compose up
         
@@ -107,7 +109,7 @@ Step-by-step guide to more trading models
 
 <a href="https://www.packtpub.com/big-data-and-business-intelligence/mastering-python-finance-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789346466"><img src="https://www.packtpub.com/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/b/1/b11165.png" alt="Mastering Python for Finance - Second Edition" height="256px" align="right"></a>
 
-I published a book titled 'Mastering Python for Finance - Second Edition', discussing the algorithmic trading ideas, statistical analysis, machine learning and deep learning, which you might find it useful.
+I published a book titled 'Mastering Python for Finance - Second Edition', discussing additional algorithmic trading ideas, statistical analysis, machine learning and deep learning, which you might find it useful.
 It is available on major sales channels including Amazon, Safari Online and Barnes & Noble,
 in paperback, Kindle and ebook.
 Get it from:
@@ -124,7 +126,7 @@ Future Enhancements
 I would love to extend this model in the unforeseeable future:
 - Extending to more than 2 securities and trade on optimum prices
 - Generate trade signals based on correlation and co-integration
-- Using PCA for next-period evaluation
+- Using PCA for next-period evaluation. In my book I've described the use of PCA to reconstruct the DOW index. Source codes <a href="https://github.com/jamesmawm/mastering-python-for-finance-second-edition/blob/master/Chapter%2006%20-%20Statistical%20Analysis%20of%20Time%20Series%20Data.ipynb">here</a>,
 - Include vector auto-regressions
 - Account for regime shifts (trending or mean-reverting states)
 - Account for structural breaks
