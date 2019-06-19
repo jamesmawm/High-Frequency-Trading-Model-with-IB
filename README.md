@@ -129,9 +129,10 @@ Topics covered with source codes:
 
 
 
-Future Enhancements
+Suggested Enhancements
 ===
-I would love to extend this model in the unforeseeable future:
+Some ideas that you can extend this model for better results:
+
 - Extending to more than 2 securities and trade on optimum prices
 - Generate trade signals based on correlation and co-integration
 - Using PCA for next-period evaluation. In my book I've described the use of PCA to reconstruct the DOW index. Source codes <a href="https://github.com/jamesmawm/mastering-python-for-finance-second-edition/blob/master/Chapter%2006%20-%20Statistical%20Analysis%20of%20Time%20Series%20Data.ipynb">here</a>,
@@ -143,10 +144,10 @@ I would love to extend this model in the unforeseeable future:
 
 Disclaimer
 ===
-- Any securities listed is not a solicitation to trade
-- This model has not been proven to be profitable in a live account,
-and I will not be responsible for any outcome of your trades.
-Should you be profitable, thank you notes are welcomed.
+- Any securities listed is not a solicitation to trade.
+- This model has not been proven to be profitable in a live account.
+- I am not liable for any outcome of your trades.
+
 
 Is this HFT?
 ===
@@ -160,13 +161,11 @@ This models aims to incorporate the above two functions and present a simplistic
 
 Other software of interest
 ===
-What about trading futures? *Psst* I've got you covered.
+I write software in my free time. One of them for trading futures was simply called 'The Gateway'. 
+It is a C# application that exposes a socket and public API method calls for interfacing Python with futures markets including CME,
+CBOT, NYSE, Eurex and ICE. Targets the T4 API.
 
-Simply called 'The Gateway', it is a C# application that exposes a socket and
-public API method calls for interfacing Python with futures markets including CME,
-CBOT, NYSE, Eurex and ICE.
-
-More information on GitHub: https://github.com/hftstrat/The-Gateway-code-samples or view on the <a href="https://github.com/hftstrat/The-Gateway-code-samples">website</a>
+More information on GitHub: https://github.com/hftstrat/The-Gateway-code-samples or view on the <a href="https://github.com/hftstrat/The-Gateway-code-samples">website</a>.
 
 
 Final Notes
@@ -175,5 +174,3 @@ Final Notes
 - This model has never been used with a real account. All testing was done in demo account only.
 - The included strategy parameters are theoretical ideal conditions, which have not been adjusted for back-tested results.
 - This project is still a work in progress. A good model could take months or even years!
-
-Email stuff here: jamesmawm@gmail.com
