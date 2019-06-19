@@ -5,12 +5,8 @@ from models.hft_model import HftModel
 if __name__ == '__main__':
 	model = HftModel(
 		host='127.0.0.1',
-		# port = 4002,
 		port=7497,
 		client_id=1,
-		is_use_gateway=False,
-		evaluation_time_secs=15,
-		resample_interval_secs='30s'
 	)
 
 	to_trade = [

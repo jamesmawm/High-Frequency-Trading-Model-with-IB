@@ -1,77 +1,73 @@
-import time
 import datetime as dt
-import pandas as pd
-from threading import Thread
+import time
 
+import pandas as pd
 from ib_insync import IB, Stock, Forex, MarketOrder
-from ib_insync.util import df
-from dateutil import tz
+
+from util import order_util, dt_util
 
 
 class HftModel(object):
 
-	def __init__(
-		self,
-		host='127.0.0.1', port=7497, client_id=101,
-		is_use_gateway=False, evaluation_time_secs=20,
-		resample_interval_secs='30s',
-		moving_window_period=dt.timedelta(hours=1)
-	):
+	def __init__(self, host='127.0.0.1', port=7497, client_id=1):
 		self.host = host
 		self.port = port
 		self.client_id = client_id
 
 		self.ib = IB()
+		self.symbol_map = {}  # maps contract -> symbol
+		self.df_hist = None  # stores mid prices in a pandas DataFrame
+		self.positions = {}  # stores IB Position object by symbol
+		self.pnl = None  # stores IB PnL object
+		self.pending_order_ids = set()
+		self.is_orders_pending = False
 
-		self.utc_timezone = tz.tzutc()
-		self.local_timezone = tz.tzlocal()
-
-		self.symbol_map = {}
-		self.historical_data = {}  # of mid prices
-		self.df_hist = None
-
+		# Input params
+		self.trade_qty = 0
 		self.symbols, self.contracts = [], []
 
+		# Strategy params
 		self.volatility_ratio = 1
 		self.beta = 0
 		self.moving_window_period = dt.timedelta(hours=1)
 		self.is_buy_signal, self.is_sell_signal = False, False
-		self.position = 0
-		self.trade_qty = 0
-		self.is_orders_pending = False
-		self.pending_order_ids = set()
-		self.positions = {}
 
 	def run(self, to_trade=[], trade_qty=0):
+		"""
+		Entry point that loops forever
+		:param to_trade:
+		:param trade_qty:
+		"""
+		# Initialize model based on inputs
 		self.trade_qty = trade_qty
-
-		self.ib.connect(self.host, self.port, clientId=101)
-
 		self.symbol_map = {str(contract): ident for (ident, contract) in to_trade}
-		contracts = [contract for (_, contract) in to_trade]
-		symbols = list(self.symbol_map.values())
-		self.symbols = symbols
-		self.contracts = contracts
+		self.contracts = [contract for (_, contract) in to_trade]
+		self.symbols = list(self.symbol_map.values())
+		self.df_hist = pd.DataFrame(columns=self.symbols)
 
-		self.df_hist = pd.DataFrame(columns=symbols)
-
+		# Establish connection to IB
+		self.ib.connect(self.host, self.port, clientId=self.client_id)
 		self.request_account_updates()
-		self.request_historical_data(contracts)
-		self.request_market_data(contracts)
+		self.request_historical_data()
+		self.request_market_data()
 
 		while self.ib.waitOnUpdate():
 			self.ib.sleep(1)
-			self.calculate_strategy_params()
+			self.recalculate_strategy_params()
 
 	def request_account_updates(self):
-		self.ib.reqAccountSummary()
-		self.ib.accountSummaryEvent += self.on_account
+		account = self.ib.managedAccounts()[0]
+		self.ib.reqPnL(account)
+		self.ib.pnlEvent += self.on_pnl
+
+		self.ib.reqPositions()
+		self.ib.positionEvent += self.on_position
 
 	def on_account(self, data):
 		print('on_acocunt:', data)
 
-	def request_market_data(self, contracts):
-		for contract in contracts:
+	def request_market_data(self):
+		for contract in self.contracts:
 			self.ib.reqMktData(contract)
 
 		self.ib.pendingTickersEvent += self.on_tick
@@ -102,43 +98,59 @@ class HftModel(object):
         - detect structural breaks
         """
 		self.calculate_signals()
-		self.calculate_positions()
 
-		if self.is_orders_pending:
-			pass
+		if self.is_orders_pending or self.check_and_enter_orders():
+			return  # Do nothing while waiting for orders to be filled
+
+		if self.is_position_flat:
+			self.print_strategy_params()
 		else:
-			is_order_placed = self.check_and_enter_orders()
+			self.print_account()
 
-			if is_order_placed:
-				pass
-			else:
-				self.print_strategy_params()
+	def print_account(self):
+		[symbol_a, symbol_b] = self.symbols
+		position_a, position_b = self.positions.get(symbol_a), self.positions.get(symbol_b)
+
+		print('[account]{symbol_a} pos={pos_a} avgPrice={avg_price_a}|'
+			  '{symbol_b} pos={pos_b}|rpnl={rpnl:.2f} upnl={upnl:.2f}|beta:{beta:.2f} volatility:{vr:.2f}'.format(
+			symbol_a=symbol_a,
+			pos_a=position_a.position if position_a else 0,
+			avg_price_a=position_a.avgCost if position_a else 0,
+			symbol_b=symbol_b,
+			pos_b=position_b.position if position_b else 0,
+			avg_price_b=position_b.avgCost if position_b else 0,
+			rpnl=self.pnl.realizedPnL,
+			upnl=self.pnl.unrealizedPnL,
+			beta=self.beta,
+			vr=self.volatility_ratio,
+		))
 
 	def print_strategy_params(self):
-		print('strategy params|beta:{beta} volatility:{vr}'.format(
+		print('[strategy params]beta:{beta:.2f} volatility:{vr:.2f}|rpnl={rpnl:.2f}'.format(
 			beta=self.beta,
-			vr=self.volatility_ratio
+			vr=self.volatility_ratio,
+			rpnl=self.pnl.realizedPnL,
 		))
 
 	def check_and_enter_orders(self):
 		if self.is_position_flat and self.is_sell_signal:
-			print('=== OPENING SHORT POSITION ===')
+			print('*** OPENING SHORT POSITION ***')
 			self.place_spread_order(-self.trade_qty)
 			return True
 
 		if self.is_position_flat and self.is_buy_signal:
-			print('=== OPENING LONG POSITION ===')
+			print('*** OPENING LONG POSITION ***')
 			self.place_spread_order(self.trade_qty)
 			return True
 
 		if self.is_position_short and self.is_buy_signal:
-			print('=== CLOSING SHORT POSITION ===')
+			print('*** CLOSING SHORT POSITION ***')
 			self.place_spread_order(self.trade_qty)
 			return True
 
 		if self.is_position_long and self.is_sell_signal:
-			print('=== CLOSING LONG POSITION ===')
-			self.place_spread_order(self.trade_qty)
+			print('*** CLOSING LONG POSITION ***')
+			self.place_spread_order(-self.trade_qty)
 			return True
 
 		return False
@@ -148,15 +160,16 @@ class HftModel(object):
 
 		[contract_a, contract_b] = self.contracts
 
-		order_a = MarketOrder(self.get_order_action(qty), abs(qty))
+		order_a = MarketOrder(order_util.get_order_action(qty), abs(qty))
 		trade_a = self.ib.placeOrder(contract_a, order_a)
 		print('Order placed:', trade_a)
 
-		order_b = MarketOrder(self.get_order_action(-qty), abs(qty))
+		order_b = MarketOrder(order_util.get_order_action(-qty), abs(qty))
 		trade_b = self.ib.placeOrder(contract_b, order_b)
 		print('Order placed:', trade_b)
 
 		self.is_orders_pending = True
+
 		trade_a.filledEvent += self.on_filled
 		trade_b.filledEvent += self.on_filled
 
@@ -169,26 +182,11 @@ class HftModel(object):
 		self.pending_order_ids.remove(trade.order.orderId)
 		print('Order IDs pending execution:', self.pending_order_ids)
 
-	def calculate_positions(self):
-		# Use account position details
-		pass
+		# Update flag when all pending orders are filled
+		if not self.pending_order_ids:
+			self.is_orders_pending = False
 
-	# symbol_a = self.symbols[0]
-	# position = self.stocks_data[symbol_a].position
-	# is_position_closed, is_short, is_long = \
-	# 	(position == 0), (position < 0), (position > 0)
-	#
-	# upnl, rpnl = self.__calculate_pnls()
-	#
-	# # Display to terminal dynamically
-	# signal_text = \
-	# 	"BUY" if is_buy_signal else "SELL" if is_sell_signal else "NONE"
-	# console_output = '\r[%s] signal=%s, position=%s UPnL=%s RPnL=%s\r' % \
-	# 				 (dt.datetime.now(), signal_text, position, upnl, rpnl)
-	# sys.stdout.write(console_output)
-	# sys.stdout.flush()
-
-	def calculate_strategy_params(self):
+	def recalculate_strategy_params(self):
 		"""
 		Here, we are calculating beta and volatility ratio
 		for our signal indicators.
@@ -202,20 +200,10 @@ class HftModel(object):
 
 		resampled = self.df_hist.resample('30s').ffill().dropna()
 		mean = resampled.mean()
-		self.beta = mean[symbol_a] / mean[symbol_b] + 1
+		self.beta = mean[symbol_a] / mean[symbol_b]
 
 		stddevs = resampled.pct_change().dropna().std()
 		self.volatility_ratio = stddevs[symbol_a] / stddevs[symbol_b]
-
-		self.read_positions()
-
-	def read_positions(self):
-		for position in self.ib.positions():
-			symbol = self.get_symbol(position.contract)
-			if symbol not in self.symbols:
-				continue
-
-			self.positions[symbol] = position
 
 	def calculate_signals(self):
 		self.trim_historical_data()
@@ -228,7 +216,7 @@ class HftModel(object):
 		self.is_sell_signal = is_down_trend and is_overbought
 
 	def trim_historical_data(self):
-		cutoff_time = dt.datetime.now(tz=self.local_timezone) - self.moving_window_period
+		cutoff_time = dt.datetime.now(tz=dt_util.LOCAL_TIMEZONE) - self.moving_window_period
 		self.df_hist = self.df_hist[self.df_hist.index >= cutoff_time]
 
 	def is_overbought_or_oversold(self):
@@ -246,15 +234,15 @@ class HftModel(object):
 	def get_incoming_tick_data(self, ticker):
 		symbol = self.get_symbol(ticker.contract)
 
-		dt_obj = self.convert_utc_datetime(ticker.time)
+		dt_obj = dt_util.convert_utc_datetime(ticker.time)
 		bid = ticker.bid
 		ask = ticker.ask
 		mid = (bid + ask) / 2
 
 		self.df_hist.loc[dt_obj, symbol] = mid
 
-	def request_historical_data(self, contracts):
-		for contract in contracts:
+	def request_historical_data(self):
+		for contract in self.contracts:
 			self.set_historical_data(contract)
 
 	def set_historical_data(self, contract):
@@ -270,23 +258,32 @@ class HftModel(object):
 			formatDate=1
 		)
 		for bar in bars:
-			dt_obj = self.convert_local_datetime(bar.date)
+			dt_obj = dt_util.convert_local_datetime(bar.date)
 			self.df_hist.loc[dt_obj, symbol] = bar.close
 
 	def get_symbol(self, contract):
-		return self.symbol_map.get(str(contract))
+		symbol = self.symbol_map.get(str(contract), None)
+		if symbol:
+			return symbol
 
-	def convert_utc_datetime(self, datetime):
-		utc = datetime.replace(tzinfo=self.utc_timezone)
-		local_time = utc.astimezone(self.local_timezone)
-		return pd.to_datetime(local_time)
+		symbol = ''
+		if type(contract) is Forex:
+			symbol = contract.localSymbol.replace('.', '')
+		elif type(contract) is Stock:
+			symbol = contract.symbol
 
-	def convert_local_datetime(self, datetime):
-		local_time = datetime.replace(tzinfo=self.local_timezone)
-		return pd.to_datetime(local_time)
+		return symbol if symbol in self.symbols else ''
 
-	def get_order_action(self, qty):
-		return 'BUY' if qty >= 0 else 'SELL'
+	def on_pnl(self, pnl):
+		self.pnl = pnl
+
+	def on_position(self, position):
+		symbol = self.get_symbol(position.contract)
+		if symbol not in self.symbols:
+			print('[warn]symbol not found for position:', position)
+			return
+
+		self.positions[symbol] = position
 
 	@property
 	def is_position_flat(self):
