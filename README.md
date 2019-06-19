@@ -91,7 +91,7 @@ At the present moment, this model utilizes statistical arbitrage incorporating t
 - Fair valuation of security using beta, or the mean over some past interval.
 - One pandas DataFrame to store historical prices
 
-Other functionas:
+Other functions:
 - Generate trade signals and place buy/sell market orders based on every incoming tick data.
 - Re-evaluating beta every some interval in seconds.
 
