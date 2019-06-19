@@ -166,7 +166,7 @@ I write software in my free time. One of them for trading futures was simply cal
 It is a C# application that exposes a socket and public API method calls for interfacing Python with futures markets including CME,
 CBOT, NYSE, Eurex and ICE. Targets the T4 API.
 
-More information on GitHub: https://github.com/hftstrat/The-Gateway-code-samples or view on the <a href="https://github.com/hftstrat/The-Gateway-code-samples">website</a>.
+More information on GitHub: https://github.com/hftstrat/The-Gateway-code-samples or view on the <a href="https://scctrader.herodevice.com/the-gateway/">website</a>.
 
 
 Final Notes
