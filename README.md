@@ -82,13 +82,13 @@ Key Concepts
 At the present moment, this model utilizes statistical arbitrage incorporating these methodologies:
 - Bootstrapping the model with historical data to derive usable strategy parameters
 - Resampling inhomogeneous time series to homogeneous time series
-- Selection of highly-correlated stock pair
-- The ability to short on one stock and long the other.
+- Selection of highly-correlated tradable pair
+- The ability to short one instrument and long the other.
 - Using volatility ratio to detect up or down trend.
 - Fair valuation of security using beta, or the mean over some past interval.
-- One pandas DataFrame to store prices, another one to store indicator values.
+- One pandas DataFrame to store historical prices
 
-Other functionalities:
+Other functionas:
 - Generate trade signals and place buy/sell market orders based on every incoming tick data.
 - Re-evaluating beta every some interval in seconds.
 
@@ -102,33 +102,21 @@ And book:
 - Introduction to High-Frequency Finance
   @ http://www.amazon.com/Introduction-High-Frequency-Finance-Ramazan-Gen%C3%A7ay/dp/0122796713
 
-Wrote a Book
+Step-by-step guide to more trading models
 ===
-I wrote a book titled 'Mastering Python for Finance', discussing the interfacing of IbPy to
-Interactive Brokers step by step. A number of other topics such as analytics, algorithmic trading ideas, big data and
-financial theory are also discussed. You might find it useful.
+
+<a href="https://www.packtpub.com/big-data-and-business-intelligence/mastering-python-finance-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789346466"><img src="https://www.packtpub.com/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/b/1/b11165.png" alt="Mastering Python for Finance - Second Edition" height="256px" align="right"></a>
+
+I published a book titled 'Mastering Python for Finance - Second Edition', discussing the algorithmic trading ideas, statistical analysis, machine learning and deep learning, which you might find it useful.
 It is available on major sales channels including Amazon, Safari Online and Barnes & Noble,
 in paperback, Kindle and ebook.
 Get it from:
-- http://www.amazon.com/Mastering-Python-Finance-James-Weiming/dp/1784394513
-- https://www.packtpub.com/big-data-and-business-intelligence/mastering-python-finance
+- https://www.amazon.com/dp/1789346460
 
 Source codes and table of contents on GitHub:
-- https://github.com/jamesmawm/Mastering-Python-for-Finance-source-codes
+- https://github.com/jamesmawm/mastering-python-for-finance-second-edition
 
-Check out these awesome books too:
-- Python for Finance by Dr. Yves Hilpisch: http://shop.oreilly.com/product/0636920032441.do
-- Python for Quants. Volume I. by Dr. Pawel Lachowicz: http://www.quantatrisk.com/python-for-quants-volume-i/
 
-Wrote a Gateway
-===
-What about trading futures? *Psst* I've got you covered.
-
-Simply called 'The Gateway', it is a C# application that exposes a socket and
-public API method calls for interfacing Python with futures markets including CME,
-CBOT, NYSE, Eurex and ICE.
-
-More information on my GitHub: https://github.com/hftstrat/The-Gateway-code-samples
 
 
 Future Enhancements
@@ -159,6 +147,16 @@ say hundreds of ticks per second. High frequency finance aims to derive stylized
 positions are typically held at most in seconds, which amounts to hundreds of trades per second.
 
 This models aims to incorporate the above two functions and present a simplistic view to traders who wish to automate their trades, get started in Python trading or use a free trading platform.
+
+Other software of interest
+===
+What about trading futures? *Psst* I've got you covered.
+
+Simply called 'The Gateway', it is a C# application that exposes a socket and
+public API method calls for interfacing Python with futures markets including CME,
+CBOT, NYSE, Eurex and ICE.
+
+More information on GitHub: https://github.com/hftstrat/The-Gateway-code-samples or view on the <a href="https://github.com/hftstrat/The-Gateway-code-samples">website</a>
 
 
 Final Notes
