@@ -40,6 +40,7 @@ class HftModel(object):
 		self.trade_qty = 0
 		self.is_orders_pending = False
 		self.pending_order_ids = set()
+		self.positions = {}
 
 	def run(self, to_trade=[], trade_qty=0):
 		self.trade_qty = trade_qty
@@ -102,57 +103,71 @@ class HftModel(object):
         """
 		self.calculate_signals()
 		self.calculate_positions()
-		self.check_and_enter_orders()
+
+		if self.is_orders_pending:
+			pass
+		else:
+			is_order_placed = self.check_and_enter_orders()
+
+			if is_order_placed:
+				pass
+			else:
+				self.print_strategy_params()
+
+	def print_strategy_params(self):
+		print('strategy params|beta:{beta} volatility:{vr}'.format(
+			beta=self.beta,
+			vr=self.volatility_ratio
+		))
 
 	def check_and_enter_orders(self):
-		if self.is_orders_pending:
-			return
-
 		if self.is_position_flat and self.is_sell_signal:
-			print('OPENING SHORT POSITION')
+			print('=== OPENING SHORT POSITION ===')
 			self.place_spread_order(-self.trade_qty)
+			return True
 
-		elif self.is_position_flat and self.is_buy_signal:
-			print('OPENING LONG POSITION:')
+		if self.is_position_flat and self.is_buy_signal:
+			print('=== OPENING LONG POSITION ===')
 			self.place_spread_order(self.trade_qty)
+			return True
 
-		elif self.is_position_short and self.is_buy_signal:
-			print('CLOSING SHORT POSITION')
+		if self.is_position_short and self.is_buy_signal:
+			print('=== CLOSING SHORT POSITION ===')
 			self.place_spread_order(self.trade_qty)
+			return True
 
-		elif self.is_position_long and self.is_sell_signal:
-			print('CLOSING LONG POSITION')
+		if self.is_position_long and self.is_sell_signal:
+			print('=== CLOSING LONG POSITION ===')
 			self.place_spread_order(self.trade_qty)
+			return True
+
+		return False
 
 	def place_spread_order(self, qty):
+		print('Placing spread orders...')
+
 		[contract_a, contract_b] = self.contracts
 
 		order_a = MarketOrder(self.get_order_action(qty), abs(qty))
 		trade_a = self.ib.placeOrder(contract_a, order_a)
-		print(trade_a)
+		print('Order placed:', trade_a)
+
 		order_b = MarketOrder(self.get_order_action(-qty), abs(qty))
 		trade_b = self.ib.placeOrder(contract_b, order_b)
-		print(trade_b)
+		print('Order placed:', trade_b)
 
 		self.is_orders_pending = True
 		trade_a.filledEvent += self.on_filled
-		# trade_a.statusEvent += self.on_status
+		trade_b.filledEvent += self.on_filled
 
 		self.pending_order_ids.add(trade_a.order.orderId)
 		self.pending_order_ids.add(trade_b.order.orderId)
-
-		print('orders completed:', trade_a)
-		print('orders completed:', trade_b)
-		print('orders pending_order_ids:', self.pending_order_ids)
+		print('Order IDs pending execution:', self.pending_order_ids)
 
 	def on_filled(self, trade):
-		print('on_filled:', trade)
+		print('Order filled:', trade)
 		self.pending_order_ids.remove(trade.order.orderId)
-		print('pending_order_ids:', self.pending_order_ids)
-
-
-	# def on_status(self, trade):
-	# 	print('on_status:', trade)
+		print('Order IDs pending execution:', self.pending_order_ids)
 
 	def calculate_positions(self):
 		# Use account position details
@@ -192,8 +207,15 @@ class HftModel(object):
 		stddevs = resampled.pct_change().dropna().std()
 		self.volatility_ratio = stddevs[symbol_a] / stddevs[symbol_b]
 
-		print('beta:', self.beta, 'vr:', self.volatility_ratio)
-		print('positions:', self.ib.positions())
+		self.read_positions()
+
+	def read_positions(self):
+		for position in self.ib.positions():
+			symbol = self.get_symbol(position.contract)
+			if symbol not in self.symbols:
+				continue
+
+			self.positions[symbol] = position
 
 	def calculate_signals(self):
 		self.trim_historical_data()
@@ -268,12 +290,18 @@ class HftModel(object):
 
 	@property
 	def is_position_flat(self):
-		return self.position == 0
+		position_obj = self.positions.get(self.symbols[0])
+		if not position_obj:
+			return True
+
+		return position_obj.position == 0
 
 	@property
 	def is_position_short(self):
-		return self.position < 0
+		position_obj = self.positions.get(self.symbols[0])
+		return position_obj and position_obj.position < 0
 
 	@property
 	def is_position_long(self):
-		return self.position > 0
+		position_obj = self.positions.get(self.symbols[0])
+		return position_obj and position_obj.position > 0
