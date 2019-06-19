@@ -138,13 +138,17 @@ class HftModel(object):
 		trade_a.filledEvent += self.on_filled
 		# trade_a.statusEvent += self.on_status
 
-
+		self.pending_order_ids.add(trade_a.order.orderId)
+		self.pending_order_ids.add(trade_b.order.orderId)
 
 		print('orders completed:', trade_a)
 		print('orders completed:', trade_b)
+		print('orders pending_order_ids:', self.pending_order_ids)
 
 	def on_filled(self, trade):
 		print('on_filled:', trade)
+		self.pending_order_ids.remove(trade.order.orderId)
+		print('pending_order_ids:', self.pending_order_ids)
 
 
 	# def on_status(self, trade):
