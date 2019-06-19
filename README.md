@@ -12,7 +12,7 @@ Requirements
 - IB paper or live trading account
 - (Optional) Docker and docker-compose
 
-What's New
+What's new
 ===
 
 *19 Jun 2019*
@@ -63,9 +63,10 @@ Steps to run the trading model on your command line:
 ## Running from a Docker container
 
 A Docker container helps to automatically build your running environment and isolate changes, all in just a few simple commands!
-You can run this trading model in headless model remotely with the following steps:
 
-- Ensure your machine has docker and docker-compose installed. Build a running image:
+You can run this trading model in headless mode remotely, with the following steps:
+
+- Ensure your machine has docker and docker-compose installed. Build the image with this command:
 
         docker-compose build
         
@@ -73,13 +74,13 @@ You can run this trading model in headless model remotely with the following ste
 
         docker-compose up
         
-    To run  in headless mode, simple add the detached command `-d`, like this:
+    To run  in headless mode, simply add the detached command `-d`, like this:
     
         docker-compose up -d
         
-    In headless model, you would have to start and stop the containers manually.
+    In headless mode, you would have to start and stop the containers manually.
 
-Key Concepts
+Key concepts
 ===
 At the present moment, this model utilizes statistical arbitrage incorporating these methodologies:
 - Bootstrapping the model with historical data to derive usable strategy parameters
@@ -129,7 +130,7 @@ Topics covered with source codes:
 
 
 
-Suggested Enhancements
+Suggested enhancements
 ===
 Some ideas that you can extend this model for better results:
 
