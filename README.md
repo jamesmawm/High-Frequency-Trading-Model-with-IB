@@ -20,7 +20,7 @@ What's New
 - Version 3.0 released
 - `ibpy` library is dropped in favour of the newer `ib_insync` library.
 - The same code logic is ported over to use the features of `ib_insync`, compatible with Python 3.7. Includes various code cleanup.
-- Dropped `matplotlib` charting in favour of headless runtime inside Docker.
+- Dropped `matplotlib` charting in favour of headless running inside Docker.
 
 
 *14 Jun 2019*
@@ -42,22 +42,40 @@ What's New
 Setting up
 ===
 
-## Running on local Python console 
+## Running on a local Python console 
 
 - If you have Python 3.7, install the requirements:
     
-    pip install -r requirements.txt
+        pip install -r requirements.txt
 
-- In IB Trader Workstation (TWS), go to Configuration > Api > Settings and:
+- In IB Trader Workstation (TWS), go to **Configuration** > **Api** > **Settings** and:
 
     - enable ActiveX and Socket Clients
     - check the port number you will be using
     - If using Docker, uncheck "Allow connections from localhost only" and enter the machine IP running TWS to "Trusted IPs".
 
-- Run `main.py` to start the model:
+- Update `main.py` with the required parameters and run the model with the command:
 
-    python main.py
+        python main.py
     
+## Running from a Docker container
+
+A Docker container helps to automatically build your running environment and isolate changes, all in just a few simple commands!
+You can run this trading model in headless model remotely.
+
+- Ensure your machine has docker and docker-compose installed. Build a running image:
+
+        docker-compose build
+        
+- Update the parameters in `docker-compose.yml`. I've set the `TWS_HOST` value in my environment variable. This is the IP address of my remote machine running TWS. Or, you can just key in the value directly there. Then, run the image as a container:
+
+        docker-compose up
+        
+    To run  in headless mode, simple add the detached command `-d`, like this:
+    
+        docker-compose up -d
+        
+    In headless model, you would have to start and stop the containers manually.
 
 Key Concepts
 ===
