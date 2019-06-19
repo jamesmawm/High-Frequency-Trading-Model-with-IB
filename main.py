@@ -13,7 +13,7 @@ if __name__ == '__main__':
 	model = HftModel1(
 		host=TWS_HOST,
 		port=TWS_PORT,
-		client_id=1,
+		client_id=2,
 	)
 
 	to_trade = [

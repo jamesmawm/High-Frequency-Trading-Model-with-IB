@@ -8,7 +8,3 @@ services:
       - .:/app
     environment:
       - TWS_HOST=${TWS_HOST}
-
-networks:
-  supernet:
-    external: true
