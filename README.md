@@ -169,7 +169,7 @@ CBOT, NYSE, Eurex and ICE. Targets the T4 API.
 More information on GitHub: https://github.com/hftstrat/The-Gateway-code-samples or view on the <a href="https://scctrader.herodevice.com/the-gateway/">website</a>.
 
 
-Final Notes
+Final notes
 ========================
 - I haven't come across any complete high-frequency trading model lying around, so here's one to get started off the ground and running.
 - This model has never been used with a real account. All testing was done in demo account only.
