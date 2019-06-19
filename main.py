@@ -1,11 +1,16 @@
+import os
+
 from ib_insync import Forex
 
 from models.hft_model_1 import HftModel1
 
 if __name__ == '__main__':
+	TWS_HOST = os.environ.get('TWS_HOST', '127.0.0.1')
+	TWS_PORT = os.environ.get('TWS_PORT', 7497)
+
 	model = HftModel1(
-		host='127.0.0.1',
-		port=7497,
+		host=TWS_HOST,
+		port=TWS_PORT,
 		client_id=1,
 	)
 

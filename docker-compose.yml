@@ -6,6 +6,8 @@ services:
     command: python3 main.py
     volumes:
       - .:/app
+    environment:
+      - TWS_HOST=${TW_HOST}
 
 networks:
   supernet:
