@@ -8,6 +8,8 @@ if __name__ == '__main__':
 	TWS_HOST = os.environ.get('TWS_HOST', '127.0.0.1')
 	TWS_PORT = os.environ.get('TWS_PORT', 7497)
 
+	print('Connecting on host:', TWS_HOST, 'port:', TWS_PORT)
+
 	model = HftModel1(
 		host=TWS_HOST,
 		port=TWS_PORT,
