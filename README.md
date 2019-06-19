@@ -136,7 +136,7 @@ Some ideas that you can extend this model for better results:
 
 - Extending to more than 2 securities and trade on optimum prices
 - Generate trade signals based on correlation and co-integration
-- Using PCA for next-period evaluation. In my book I've described the use of PCA to reconstruct the DOW index. Source codes <a href="https://github.com/jamesmawm/mastering-python-for-finance-second-edition/blob/master/Chapter%2006%20-%20Statistical%20Analysis%20of%20Time%20Series%20Data.ipynb">here</a>,
+- Using PCA for next-period evaluation. In my book I've described the use of PCA to reconstruct the DOW index. Source codes <a href="https://github.com/jamesmawm/mastering-python-for-finance-second-edition/blob/master/Chapter%2006%20-%20Statistical%20Analysis%20of%20Time%20Series%20Data.ipynb">here</a>.
 - Include vector auto-regressions
 - Account for regime shifts (trending or mean-reverting states)
 - Account for structural breaks
