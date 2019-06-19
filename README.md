@@ -120,6 +120,7 @@ Source codes and table of contents on GitHub:
 
 Topics covered with source codes:
 
+- <a href="https://github.com/jamesmawm/mastering-python-for-finance-second-edition/blob/master/Chapter%2006%20-%20Statistical%20Analysis%20of%20Time%20Series%20Data.ipynb">Applying kernel PCA</a>. Forecasting and predicting a time series.
 - <a href="https://github.com/jamesmawm/mastering-python-for-finance-second-edition/blob/master/Chapter%2007%20-%20Interactive%20Financial%20Analytics%20with%20VIX.ipynb">Replicating the VIX index</a>
 - <a href="https://github.com/jamesmawm/mastering-python-for-finance-second-edition/blob/master/Chapter%2008%20-%20Building%20an%20Algorithmic%20Trading%20Platform.ipynb">Building a mean-reverting and trend-following trading model</a>
 - <a href="https://github.com/jamesmawm/mastering-python-for-finance-second-edition/blob/master/Chapter%2009%20-%20Implementing%20a%20Backtesting%20System.ipynb">Implementing a backtesting system</a>
