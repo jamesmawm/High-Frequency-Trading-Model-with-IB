@@ -1,2 +1,8 @@
+eventkit==0.8.5
 ib-insync==0.9.53
+nest-asyncio==1.0.0
 numpy==1.16.4
+pandas==0.24.2
+python-dateutil==2.8.0
+pytz==2019.1
+six==1.12.0

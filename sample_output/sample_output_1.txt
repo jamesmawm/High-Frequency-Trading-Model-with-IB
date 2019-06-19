@@ -1,0 +1,192 @@
+[2019-06-19 13:20:07.863028]started
+[2019-06-19 13:20:14.626974][strategy params]beta:0.00 volatility:1.00|rpnl=-496.88
+[2019-06-19 13:20:14.884730][strategy params]beta:0.00 volatility:1.00|rpnl=-496.88
+[2019-06-19 13:20:15.065342][strategy params]beta:0.00 volatility:1.00|rpnl=-496.88
+[2019-06-19 13:20:15.376828][strategy params]beta:0.00 volatility:1.00|rpnl=-496.88
+[2019-06-19 13:20:15.735186][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:15.946102][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:15.954929][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:16.234155][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:17.102221][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:17.394180][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:17.976145][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:17.984933][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:18.271036][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:18.281813][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:18.562996][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:18.850072][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:19.141056][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:19.428133][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:19.719114][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:19.733763][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:20.020840][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:20.069662][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:20.299131][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:20.931871][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:21.219922][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:22.094826][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:22.382877][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:22.394597][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:22.667026][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:22.957035][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:22.965820][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:23.245087][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:23.537047][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:23.826078][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:24.113192][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:24.362190][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:24.370955][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:24.651179][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:25.045666][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:25.897135][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:26.134411][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:26.151011][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:26.419536][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:26.429302][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:26.717354][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:27.012242][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:27.933037][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:28.223082][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:28.231833][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:28.510132][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:28.804043][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:29.087215][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:29.379175][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:29.667229][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:29.954341][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:30.247243][strategy params]beta:0.01 volatility:0.88|rpnl=-496.88
+[2019-06-19 13:20:30.553870][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:30.824327][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:32.159137][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:32.731390][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:33.021345][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:33.601358][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:33.900154][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:34.431342][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:34.440130][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:34.719434][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:35.009403][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:35.327766][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:35.589416][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:36.167477][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:36.457483][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:36.757253][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:37.672189][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:37.682992][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:38.258098][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:38.542211][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:38.830265][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:39.119328][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:39.128119][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:39.408324][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:39.698330][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:39.988374][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:40.283225][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:40.588854][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:40.859334][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:41.148364][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:41.438371][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:41.730331][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:42.023266][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:42.311320][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:42.322058][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:42.886448][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:43.176455][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:43.466500][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:43.756469][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:44.049406][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:44.063075][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:44.898919][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+[2019-06-19 13:20:44.912590][strategy params]beta:0.01 volatility:0.89|rpnl=-496.88
+*** OPENING SHORT POSITION ***
+Placing spread orders...
+Order placed: Trade(contract=Forex('EURUSD', exchange='IDEALPRO'), order=MarketOrder(orderId=72, clientId=1, action='SELL', totalQuantity=100, conditions=[], softDollarTier=SoftDollarTier()), orderStatus=OrderStatus(status='PendingSubmit'), fills=[], log=[TradeLogEntry(time=datetime.datetime(2019, 6, 19, 13, 20, 45, 201621, tzinfo=datetime.timezone.utc), status='PendingSubmit', message='')])
+Order placed: Trade(contract=Forex('USDJPY', exchange='IDEALPRO'), order=MarketOrder(orderId=73, clientId=1, action='BUY', totalQuantity=100, conditions=[], softDollarTier=SoftDollarTier()), orderStatus=OrderStatus(status='PendingSubmit'), fills=[], log=[TradeLogEntry(time=datetime.datetime(2019, 6, 19, 13, 20, 45, 203573, tzinfo=datetime.timezone.utc), status='PendingSubmit', message='')])
+Order IDs pending execution: {72, 73}
+Order filled: Trade(contract=Forex('EURUSD', exchange='IDEALPRO'), order=MarketOrder(orderId=72, clientId=1, permId=527821719, action='SELL', totalQuantity=100, lmtPrice=0.0, auxPrice=0.0, tif='DAY', ocaType=3, trailStopPrice=0.12050000000000005, openClose='', eTradeOnly=False, firmQuoteOnly=False, volatilityType=0, deltaNeutralOrderType='None', referencePriceType=0, account='DU1524547', clearingIntent='IB', orderComboLegs=[], adjustedOrderType='None', conditions=[], softDollarTier=SoftDollarTier(), cashQty=0.0, dontUseAutoPriceForHedge=True), orderStatus=OrderStatus(status='Filled', filled=100.0, avgFillPrice=1.12054, permId=527821719, lastFillPrice=1.12054, clientId=1), fills=[Fill(contract=Forex('EURUSD', conId=12087792, exchange='IDEALPRO', localSymbol='EUR.USD', tradingClass='EUR.USD'), execution=Execution(execId='000132b0.5d09c6e2.01.01', time=datetime.datetime(2019, 6, 19, 13, 20, 47, tzinfo=datetime.timezone.utc), acctNumber='DU1524547', exchange='IDEALPRO', side='SLD', shares=100.0, price=1.12054, permId=527821719, clientId=1, orderId=72, cumQty=100.0, avgPrice=1.12054, lastLiquidity=2), commissionReport=CommissionReport(), time=datetime.datetime(2019, 6, 19, 13, 20, 46, 177905, tzinfo=datetime.timezone.utc))], log=[TradeLogEntry(time=datetime.datetime(2019, 6, 19, 13, 20, 45, 201621, tzinfo=datetime.timezone.utc), status='PendingSubmit', message=''), TradeLogEntry(time=datetime.datetime(2019, 6, 19, 13, 20, 46, 60729, tzinfo=datetime.timezone.utc), status='PreSubmitted', message=''), TradeLogEntry(time=datetime.datetime(2019, 6, 19, 13, 20, 46, 177905, tzinfo=datetime.timezone.utc), status='Submitted', message=''), TradeLogEntry(time=datetime.datetime(2019, 6, 19, 13, 20, 46, 177905, tzinfo=datetime.timezone.utc), status='Submitted', message='Fill 100.0@1.12054'), TradeLogEntry(time=datetime.datetime(2019, 6, 19, 13, 20, 46, 177905, tzinfo=datetime.timezone.utc), status='Filled', message='')])
+Order IDs pending execution: {73}
+Order filled: Trade(contract=Forex('USDJPY', exchange='IDEALPRO'), order=MarketOrder(orderId=73, clientId=1, permId=527821720, action='BUY', totalQuantity=100, lmtPrice=0.0, auxPrice=0.0, tif='DAY', ocaType=3, trailStopPrice=109.465, openClose='', eTradeOnly=False, firmQuoteOnly=False, volatilityType=0, deltaNeutralOrderType='None', referencePriceType=0, account='DU1524547', clearingIntent='IB', orderComboLegs=[], adjustedOrderType='None', conditions=[], softDollarTier=SoftDollarTier(), cashQty=0.0, dontUseAutoPriceForHedge=True), orderStatus=OrderStatus(status='Filled', filled=100.0, avgFillPrice=108.463, permId=527821720, lastFillPrice=108.463, clientId=1), fills=[Fill(contract=Forex('USDJPY', conId=15016059, exchange='IDEALPRO', localSymbol='USD.JPY', tradingClass='USD.JPY'), execution=Execution(execId='000132b0.5d09c6e3.01.01', time=datetime.datetime(2019, 6, 19, 13, 20, 47, tzinfo=datetime.timezone.utc), acctNumber='DU1524547', exchange='IDEALPRO', side='BOT', shares=100.0, price=108.463, permId=527821720, clientId=1, orderId=73, cumQty=100.0, avgPrice=108.463, lastLiquidity=2), commissionReport=CommissionReport(), time=datetime.datetime(2019, 6, 19, 13, 20, 46, 427875, tzinfo=datetime.timezone.utc))], log=[TradeLogEntry(time=datetime.datetime(2019, 6, 19, 13, 20, 45, 203573, tzinfo=datetime.timezone.utc), status='PendingSubmit', message=''), TradeLogEntry(time=datetime.datetime(2019, 6, 19, 13, 20, 46, 411278, tzinfo=datetime.timezone.utc), status='PreSubmitted', message=''), TradeLogEntry(time=datetime.datetime(2019, 6, 19, 13, 20, 46, 412254, tzinfo=datetime.timezone.utc), status='Submitted', message=''), TradeLogEntry(time=datetime.datetime(2019, 6, 19, 13, 20, 46, 427875, tzinfo=datetime.timezone.utc), status='Submitted', message='Fill 100.0@108.463'), TradeLogEntry(time=datetime.datetime(2019, 6, 19, 13, 20, 46, 427875, tzinfo=datetime.timezone.utc), status='Filled', message='')])
+Order IDs pending execution: set()
+[2019-06-19 13:20:47.229148][account]EURUSD pos=-100.0 avgPrice=1.12054|USDJPY pos=100.0|rpnl=-496.88 upnl=-4.00|beta:0.01 volatility:0.89
+[2019-06-19 13:20:48.297070][account]EURUSD pos=-100.0 avgPrice=1.12054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.00|beta:0.01 volatility:0.89
+[2019-06-19 13:20:49.851584][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.00|beta:0.01 volatility:0.89
+[2019-06-19 13:20:50.986670][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.00|beta:0.01 volatility:0.89
+[2019-06-19 13:20:52.084242][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.00|beta:0.01 volatility:0.89
+[2019-06-19 13:20:53.279381][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.89
+[2019-06-19 13:20:54.451124][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.89
+[2019-06-19 13:20:55.592597][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.89
+[2019-06-19 13:20:56.711630][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.89
+[2019-06-19 13:20:57.875390][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.89
+[2019-06-19 13:20:59.308724][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.89
+[2019-06-19 13:21:00.477952][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.89
+[2019-06-19 13:21:02.556097][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.89
+[2019-06-19 13:21:05.305911][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.89
+[2019-06-19 13:21:06.439571][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.89
+[2019-06-19 13:21:07.552726][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.89
+[2019-06-19 13:21:08.697131][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.89
+[2019-06-19 13:21:09.843487][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.89
+[2019-06-19 13:21:11.883295][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.89
+[2019-06-19 13:21:13.084226][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.89
+[2019-06-19 13:21:14.819594][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:15.951300][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:17.081055][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:18.227413][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:19.397749][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:20.542636][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:22.263146][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:23.388054][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:24.835160][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:26.253907][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:27.949202][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:29.267706][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:30.439290][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:31.608061][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:32.846019][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:34.021263][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:35.167059][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:36.299834][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:38.323869][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:39.446353][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:41.110650][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:42.241010][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:43.390851][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:45.381832][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:46.559531][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:47.669996][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.03|beta:0.01 volatility:0.89
+[2019-06-19 13:21:49.113598][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.03|beta:0.01 volatility:0.89
+[2019-06-19 13:21:50.703867][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:51.899108][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:53.106001][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:54.271887][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:55.391932][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:56.564599][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:57.694375][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:58.834886][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:21:59.983158][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.89
+[2019-06-19 13:22:01.122682][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:02.265131][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.88
+[2019-06-19 13:22:03.402699][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.02|beta:0.01 volatility:0.88
+[2019-06-19 13:22:04.572488][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:06.450261][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:07.611212][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:09.708633][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:10.849131][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:12.413407][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:13.886876][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:15.077348][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:16.228585][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:17.359356][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:18.529108][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:21.492643][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:22.686875][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:23.859594][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:25.419938][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:27.151190][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:28.734054][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:29.889197][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:32.229722][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:33.387796][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:34.556609][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:35.683434][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:37.468397][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
+[2019-06-19 13:22:39.312562][account]EURUSD pos=-100.0 avgPrice=1.10054|USDJPY pos=100.0|rpnl=-496.87 upnl=-4.01|beta:0.01 volatility:0.88
