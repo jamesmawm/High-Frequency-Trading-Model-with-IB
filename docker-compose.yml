@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/app
     environment:
-      - TWS_HOST=${TW_HOST}
+      - TWS_HOST=${TWS_HOST}
 
 networks:
   supernet:
