@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  hft_model_1:
+    build: .
+    command: python3 main.py
+    volumes:
+      - .:/app
+    environment:
+      - TWS_HOST=${TWS_HOST}
