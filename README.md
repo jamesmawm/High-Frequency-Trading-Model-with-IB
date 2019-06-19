@@ -1,39 +1,63 @@
 Purpose
-====================================
+===
 A simple trading equity trading model on Interactive Brokers' API dealing with (pseudo) high-frequency data studies.
 
 ![alt text](https://github.com/jamesmawm/High-Frequency-Trading-Model-with-IB/blob/master/output/run_02_screenshot.png?raw=true "Chart output")
 
+Requirements
+===
+
+- Python 3.7
+- IB Trader Workstation Build 973.2
+- IB paper or live trading account
+- (Optional) Docker and docker-compose
 
 What's New
 ===
 
-14 Jun 2019
+*19 Jun 2019*
 
-Merged pull request from: https://github.com/chicago-joe/IB_PairsTrading_Algo
+- Version 3.0 released
+- `ibpy` library is dropped in favour of the newer `ib_insync` library.
+- The same code logic is ported over to use the features of `ib_insync`, compatible with Python 3.7. Includes various code cleanup.
+- Dropped `matplotlib` charting in favour of headless runtime inside Docker.
 
-Thanks to chicago-joe for updating to work with Python 3.
 
-As this is only a compatibility update, there are many outdated components and the trading model is quite unlikely to be working as intended.
+*14 Jun 2019*
 
-8 Jun 2015
+- Version 2.0 released
+- Merged pull request from: https://github.com/chicago-joe/IB_PairsTrading_Algo
+    
+    Thanks to chicago-joe for updating to work with Python 3.
+    
+    As this is only a compatibility update, there are many outdated components and the trading model is quite unlikely to be working as intended.
+    
+
+*8 Jun 2015*
+- Version 1.0 released
 - Refactor and conform to PEP8 standards
 - New chart display with 4 subplots
 
-Requirements
-===
-- An Interactive Brokers account with TWS/API gateway (or use 'edemo/demouser' account)
-- IbPy @ https://github.com/blampe/IbPy
-- Pandas
-- NumPy
-- matplotlib
 
-How to Use
+Setting up
 ===
-- *classes* folder contain the required class files
-- *models* folder contain a simple trading model
-- *params* folder contain files storing the various settings used
-- Run **main.py** to start the model
+
+## Running on local Python console 
+
+- If you have Python 3.7, install the requirements:
+    
+    pip install -r requirements.txt
+
+- In IB Trader Workstation (TWS), go to Configuration > Api > Settings and:
+
+    - enable ActiveX and Socket Clients
+    - check the port number you will be using
+    - If using Docker, uncheck "Allow connections from localhost only" and enter the machine IP running TWS to "Trusted IPs".
+
+- Run `main.py` to start the model:
+
+    python main.py
+    
 
 Key Concepts
 ===
