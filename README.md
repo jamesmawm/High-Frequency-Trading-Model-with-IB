@@ -17,7 +17,7 @@ What's new
 
 *19 Jun 2019*
 
-- Version 3.0 released
+- <a href="https://github.com/jamesmawm/High-Frequency-Trading-Model-with-IB/tree/v3.0">Version 3.0</a> released
 - `ibpy` library is dropped in favour of the newer `ib_insync` library.
 - The same code logic is ported over to use the features of `ib_insync`, compatible with Python 3.7. Includes various code cleanup.
 - Dropped `matplotlib` charting in favour of headless running inside Docker.
@@ -25,7 +25,7 @@ What's new
 
 *14 Jun 2019*
 
-- Version 2.0 released
+- <a href="https://github.com/jamesmawm/High-Frequency-Trading-Model-with-IB/tree/v2.0">Version 2.0</a> released
 - Merged pull request from: https://github.com/chicago-joe/IB_PairsTrading_Algo
     
     Thanks to chicago-joe for updating to work with Python 3.
@@ -34,7 +34,7 @@ What's new
     
 
 *8 Jun 2015*
-- Version 1.0 released
+- <a href="https://github.com/jamesmawm/High-Frequency-Trading-Model-with-IB/tree/v1.0">Version 1.0</a> released
 - Refactor and conform to PEP8 standards
 - New chart display with 4 subplots
 
