@@ -130,7 +130,7 @@ Topics covered with source codes:
 - <a href="https://github.com/jamesmawm/mastering-python-for-finance-second-edition/blob/master/Chapter%2010%20-%20Machine%20Learning%20for%20Finance.ipynb">Predicting returns with a cross-asset momentum machine learning model</a>
 - <a href="https://github.com/jamesmawm/mastering-python-for-finance-second-edition/blob/master/Chapter%2011%20-%20Deep%20Learning%20for%20Finance.ipynb">Credit card payment default prediction with Keras</a>. Get started in deep learning with TensorFlow for predicting prices.
 
-
+If you would like a **FREE** review copy, drop me an email at jamesmawm@gmail.com.
 
 Suggested enhancements
 ===
