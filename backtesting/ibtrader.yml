@@ -1,0 +1,8 @@
+name: ibtrader
+channels:
+  - intel
+  - default
+  - defaults
+  - conda-forge
+prefix: C:\Users\jloss\Anaconda3\envs\ibtrader\envs\ibtrader
+

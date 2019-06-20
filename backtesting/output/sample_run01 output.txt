@@ -1,0 +1,41 @@
+
+
+2018-01-12 20:56:00, Cash 100000.0 Value 100000.0
+2018-01-12 20:56:00, Close(bp), 43.89
+2018-01-12 20:56:00, Close(rds-a), 70.88
+2018-01-12 20:57:00, Cash 100000.0 Value 100000.0
+2018-01-12 20:57:00, Close(bp), 43.90
+2018-01-12 20:57:00, Close(rds-a), 70.88
+2018-01-12 20:58:00, Cash 100000.0 Value 100000.0
+2018-01-12 20:58:00, Close(bp), 43.91
+2018-01-12 20:58:00, Close(rds-a), 70.88
+2018-01-12 20:59:00, Cash 100000.0 Value 100000.0
+2018-01-12 20:59:00, Close(bp), 43.92
+2018-01-12 20:59:00, Close(rds-a), 70.89
+2018-01-16 15:34:00, Cash 100000.0 Value 100000.0
+2018-01-16 15:34:00, Close(bp), 42.75
+2018-01-16 15:34:00, Close(rds-a), 70.44
+2018-01-16 15:34:00, BUY PORTFOLIO,BUY42.75,SELL70.435
+<class 'backtrader.order.BuyOrder'> Is Buy  True
+<class 'backtrader.order.SellOrder'> Is Buy  False
+<class 'backtrader.order.BuyOrder'> Is Buy  True
+<class 'backtrader.order.SellOrder'> Is Buy  False
+<class 'backtrader.order.BuyOrder'> Is Buy  True
+2018-01-16 15:35:00, BUY EXECUTED, Price: 42.75, Cost: 42750.00, Comm 42.75
+<class 'backtrader.order.SellOrder'> Is Buy  False
+2018-01-16 15:35:00, SELL EXECUTED, Price: 70.44, Cost: -39728.16, Comm 39.73
+2018-01-16 15:35:00, Cash 96895.68184 Value 99917.52184
+2018-01-16 15:35:00, Close(bp), 42.75
+2018-01-16 15:35:00, Close(rds-a), 70.44
+2018-01-16 15:36:00, Cash 96895.68184 Value 99912.52184
+2018-01-16 15:36:00, Close(bp), 42.74
+2018-01-16 15:36:00, Close(rds-a), 70.44
+2018-01-16 15:37:00, Cash 96895.68184 Value 99917.52184
+2018-01-16 15:37:00, Close(bp), 42.75
+2018-01-16 15:37:00, Close(rds-a), 70.44
+2018-01-16 15:38:00, Cash 96895.68184 Value 99922.52184
+2018-01-16 15:38:00, Close(bp), 42.76
+2018-01-16 15:38:00, Close(rds-a), 70.44
+2018-01-16 15:39:00, Cash 96895.68184 Value 99932.52184
+2018-01-16 15:39:00, Close(bp), 42.77
+2018-01-16 15:39:00, Close(rds-a), 70.44
