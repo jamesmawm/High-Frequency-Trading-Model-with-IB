@@ -42,6 +42,8 @@ What's new
 Setting up
 ===
 
+You can choose to run this model in your console OR in Docker.
+
 ## Running on a local Python console 
 
 Steps to run the trading model on your command line:
@@ -62,9 +64,11 @@ Steps to run the trading model on your command line:
     
 ## Running from a Docker container
 
+This step is optional. You can choose to deploy one or several instances of these algos on a remote machine for execution using Docker.
+
 A Docker container helps to automatically build your running environment and isolate changes, all in just a few simple commands!
 
-You can run this trading model in headless mode remotely, with the following steps:
+To run this trading model in headless mode:
 
 - In TWS, ensure that remote API connections are accepted and the Docker machine's IP is added to **Trusted IPs**.
 
@@ -72,11 +76,11 @@ You can run this trading model in headless mode remotely, with the following ste
 
         docker-compose build
         
-- Update the parameters in `docker-compose.yml`. I've set the `TWS_HOST` value in my environment variables. This is the IP address of my remote machine running TWS. Or, you can just manually enter the IP address value directly there. Then, run the image as a container:
+- Update the parameters in `docker-compose.yml`. I've set the `TWS_HOST` value in my environment variables. This is the IP address of the remote machine running TWS. Or, you can just manually enter the IP address value directly. Then, run the image as a container instance:
 
         docker-compose up
         
-    To run  in headless mode, simply add the detached command `-d`, like this:
+    To run in headless mode, simply add the detached command `-d`, like this:
     
         docker-compose up -d
         
