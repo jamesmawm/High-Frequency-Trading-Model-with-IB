@@ -1,6 +1,6 @@
 Purpose
 ===
-A basic trading trading model on Interactive Brokers' API dealing with high-frequency data studies.
+A basic trading model on Interactive Brokers' API dealing with high-frequency data studies.
 
 ![alt text](https://github.com/jamesmawm/High-Frequency-Trading-Model-with-IB/blob/v3.0/sample_output/videoshot.gif?raw=true "Chart output")
 
